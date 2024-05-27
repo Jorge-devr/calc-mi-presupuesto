@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Pacifico&family=Permanent+Marker&family=Sevillana&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">    
+    <title>Calcular Presupuesto</title>
+</head>
+<body>
+        <header>
+            <div id="title">
+                Presupuesto
+            </div>
+        </header>
+            <div class="agregar" class="container">
+                <div class="agregar" id="interno">
+                    <div class="agregar_contenedor" class="input-group">
+                        <label for="description">Descripción:</label>
+                        <input type="text" id="description" class="agregar_descripcion" placeholder="Agregar Descripción"/>
+                        <label for="amount">Cantidad:</label>
+                        <input type="number" class="agregar_valor" placeholder="Valor" id="amount" step="any"/>
+                        <label class="radio_label" class="tipo_transaccion">
+                            <input type="radio" id="ingreso" name="type" value="ingreso" checked>
+                            <label for="ingreso" class="custom_radio"></label><p>Ingreso</p>
+                        </label>
+                        <div class="tipo_transaccion"><label class="radio_label">
+                            <input type="radio" id="egreso" name="type" value="egreso" id="numberInput">
+                            <label for="egreso" class="custom_radio"></label><p>Gasto</p>
+                    </label>
+                    </div><button class="agregar_btn" id="addButton">Añadir</button>
+                        <div id="disponible"><span><p>Disponible:&nbsp;</p></span><span class="green"><p>Vacio</p></span></div>
+                    </div>
+                </div>
+            </div>
+        <div class="first-div">
+            <div class="father" id="result">
+                <div class="myData-countainer" >
+                    <h1>Ingresos</h1>
+                    <div class="ingreso-list" class="item">
+                        <ul id="ingresoList" class="item"></ul>
+                    </div>
+                </div>
+                <div class="myData-countainer" >
+                    <h1>Gastos</h1>
+                    <div class="egreso-list">
+                        <ul id="egresoList" class="item"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="resetButton" class="reset-Button">Reset</button>
+        <script src="/assets/js/app.js"></script>
+</body>
+</html>
